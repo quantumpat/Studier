@@ -26,6 +26,9 @@ public class School {
      */
     public School(String name, String canvasHeader) {
 
+        this.name = name;
+        this.canvasHeader = canvasHeader;
+
     }
 
     /**

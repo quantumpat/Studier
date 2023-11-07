@@ -80,6 +80,15 @@ public class CanvasAccesser {
 
     }
 
+    public void launchSchool() {
+
+        if (currentSchool == null)
+            return;
+
+        driver.get("https://" + currentSchool.getCanvasHeader() + ".instructure.com");
+
+    }
+
     /**
      * Quits the chrome driver.
      */

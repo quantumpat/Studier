@@ -13,6 +13,6 @@ public class SchoolManager {
      */
 
     //University of Utah
-    public final School universityOfUtah = new School("University of Utah", "utah");
+    public static final School UTAH = new School("University of Utah", "utah");
 
 }
