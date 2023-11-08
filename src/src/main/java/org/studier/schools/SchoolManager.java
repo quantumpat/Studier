@@ -1,6 +1,8 @@
 package org.studier.schools;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Manages all the schools who have access to the program.
@@ -16,10 +18,12 @@ public class SchoolManager {
      * - make sure to add school in addSchools() method
      */
 
-    /**
-     * University of Utah (added)
-     */
     public static final School UTAH = new School("University of Utah", "utah");
+    public static final School WISCO = new School("University of Wisconsin", "wisc");
+    public static final School UDenver = new School("University of Denver", "du");
+    public static final School CUBoulder = new School("University of Colorado Boulder", "cuboulder");
+    public static final School Clemson = new School("Clemson University", "clemson");
+    public static final School BostonCollege = new School("Boston College", "bostoncollege");
 
     /**
      * A list of all schools that have been registered.
@@ -33,6 +37,15 @@ public class SchoolManager {
 
         //Add schools below:
         schools.add(UTAH);
+        schools.add(WISCO);
+        schools.add(UDenver);
+        schools.add(CUBoulder);
+        schools.add(Clemson);
+        schools.add(BostonCollege);
+
+
+        //Alphabetize the list
+        //Collections.sort(schools);
 
     }
 

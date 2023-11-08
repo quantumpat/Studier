@@ -60,6 +60,8 @@ public class ChooseSchoolPanel extends JPanel implements ActionListener {
         list = new DefaultListModel();
         listElement = new JList(list);
         listElement.setBounds(60, 40, 480, 200);
+        listElement.setFixedCellWidth(480);
+        listElement.setFixedCellHeight(20);
         listElement.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         listElement.setLayoutOrientation(JList.HORIZONTAL_WRAP);
         listElement.setVisibleRowCount(-1);

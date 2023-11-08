@@ -68,7 +68,7 @@ public class CanvasAccesser {
     }
 
     /**
-     * Launches a school's canvas page onto a newly created chrome browser.
+     * Launches a school's canvas page onto a newly created Chrome browser.
      */
     public void launchSchool() {
 
@@ -85,7 +85,7 @@ public class CanvasAccesser {
     /**
      * Quits the chrome driver.
      */
-    public void teardown() {
+    public void close() {
 
         if (driver != null)
             driver.quit();

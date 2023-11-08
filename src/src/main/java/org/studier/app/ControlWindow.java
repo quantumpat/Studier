@@ -48,11 +48,19 @@ public class ControlWindow {
         this.canvasAccesser = canvasAccesser;
 
         frame = new JFrame("Studier Control View");
+        frame.setAlwaysOnTop(true);
         frame.setSize(WIDTH, HEIGHT);
         frame.setPreferredSize(new Dimension(WIDTH, HEIGHT));
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        frame.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                canvasAccesser.close();
+            }
+        });
 
         chooseSchoolPanel = new ChooseSchoolPanel(canvasAccesser);
 
