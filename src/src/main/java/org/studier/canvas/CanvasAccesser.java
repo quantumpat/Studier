@@ -60,7 +60,10 @@ public class CanvasAccesser {
      */
     public static void setupWebdriverChromeDriver() {
 
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/src/main/resources/chromedriver-mac");
+        if (System.getProperty("os.name").equals("Mac OS X"))
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/src/main/resources/chromedriver-mac");
+        else if (System.getProperty("os.name").equals("Windows"))
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/src/main/resources/chromedriver-windows");
 
         System.out.println("Chrome driver successfully setup!");
         CanvasAccesser.chromeDriverSetup = true;
