@@ -5,6 +5,7 @@ import org.studier.schools.School;
 import org.studier.schools.SchoolManager;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -50,21 +51,23 @@ public class ChooseSchoolPanel extends JPanel implements ActionListener {
         this.setSize(new Dimension(ControlWindow.WIDTH, ControlWindow.HEIGHT));
         this.setPreferredSize(new Dimension(ControlWindow.WIDTH, ControlWindow.HEIGHT));
 
-        JLabel label1 = new JLabel("Choose your school:");
-        label1.setBounds(50, 10, 600, 30);
+        JLabel label1 = new JLabel("Choose your school", SwingConstants.CENTER);
+        label1.setBounds(15, 15, 600, 30);
+        label1.setFont(new Font("Arial Black", Font.PLAIN, 18));
 
         chooseSchoolButton = new JButton("Choose");
-        chooseSchoolButton.setBounds(60, 240, 480, 30);
+        chooseSchoolButton.setBounds(58, 266, 484, 30);
         chooseSchoolButton.addActionListener(this);
 
         list = new DefaultListModel();
         listElement = new JList(list);
-        listElement.setBounds(60, 40, 480, 200);
+        listElement.setBounds(60, 60, 480, 200);
         listElement.setFixedCellWidth(480);
         listElement.setFixedCellHeight(20);
         listElement.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         listElement.setLayoutOrientation(JList.HORIZONTAL_WRAP);
         listElement.setVisibleRowCount(-1);
+        listElement.setBorder(new EmptyBorder(2,2, 2, 2));
 
         JScrollPane listScroller = new JScrollPane(listElement);
         listScroller.setPreferredSize(new Dimension(250, 80));
