@@ -1,7 +1,7 @@
 package org.studier.canvas;
 
 import org.openqa.selenium.chrome.ChromeDriver;
-import schools.School;
+import org.studier.schools.School;
 
 /**
  * Opens a Chrome browser and accesses canvas elements.
@@ -50,8 +50,6 @@ public class CanvasAccesser {
         if (!CanvasAccesser.isChromeDriverSetup())
             throw new RuntimeException("The canvas accesser's web driver was not setup properly!");
 
-        setup();
-
         //END
         initialized = true;
 
@@ -70,20 +68,15 @@ public class CanvasAccesser {
     }
 
     /**
-     * Sets up the chrome driver.
+     * Launches a school's canvas page onto a newly created chrome browser.
      */
-    public void setup() {
-
-        driver = new ChromeDriver();
-
-        System.out.println("Chrome browser launched!");
-
-    }
-
     public void launchSchool() {
 
         if (currentSchool == null)
             return;
+
+        driver = new ChromeDriver();
+        System.out.println("Chrome browser launched!");
 
         driver.get("https://" + currentSchool.getCanvasHeader() + ".instructure.com");
 

@@ -1,4 +1,4 @@
-package schools;
+package org.studier.schools;
 
 /**
  * A school to be accessed by the program.
@@ -29,6 +29,13 @@ public class School {
         this.name = name;
         this.canvasHeader = canvasHeader;
 
+    }
+
+    /**
+     * The string version of the object.
+     */
+    public String toString() {
+        return name;
     }
 
     /**
